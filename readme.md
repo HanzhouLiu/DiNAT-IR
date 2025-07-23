@@ -5,8 +5,7 @@
 Official PyTorch implementation of the paper:  
 **[DiNAT-IR: Exploring Dilated Neighborhood Attention for High-Quality Image Restoration](https://arxiv.org/abs/xxx)**
 
-**Hanzhou Liu\*, Binghan Li\*, Chengkai Liu, Mi Lu**  
-\*Equal contribution
+**Hanzhou Liu, Binghan Li, Chengkai Liu, Mi Lu**
 
 > We propose DiNAT-IR, a novel image restoration Transformer that builds upon dilated neighborhood attention. It balances local and global context via multi-dilated windowed attention, and introduces a channel-aware module to overcome the locality bottleneck. DiNAT-IR achieves competitive performance across diverse low-level tasks, including motion deblurring, defocus deblurring, denoising, and deraining.
 
