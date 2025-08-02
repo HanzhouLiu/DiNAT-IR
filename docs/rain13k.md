@@ -1,6 +1,6 @@
-## 🚀 Reproducing Results on DPDD Dataset
+## 🚀 Reproducing Results on Rain13K Dataset
 
-We provide instructions to reproduce **DiNAT-IR** results on the DPDD defocus deblurring dataset.
+We provide instructions to reproduce **DiNAT-IR** results on the Rain13K deraining dataset.
 
 ---
 
@@ -8,31 +8,23 @@ We provide instructions to reproduce **DiNAT-IR** results on the DPDD defocus de
 
 #### 🔹 Training Data
 
-- Download the **DPDD training set** from [Restormer](https://github.com/swz30/Restormer/tree/main/Defocus_Deblurring), or follow the link in [dpdd_download](/scripts/data_preparation/dpdd_download.py) to download it manually.
+- Download the **Rain13K training set** from [Restormer](https://github.com/swz30/Restormer/blob/main/Deraining/download_data.py).
 - Organize the data into the following directory structure  (or, you can use soft link):
 
 ```
-./datasets/DPDD/train/inputC/
-./datasets/DPDD/train/inputL/
-./datasets/DPDD/train/inputR/
-./datasets/DPDD/train/target/
+./datasets/Rain13K/train/Rain13K/input/
+./datasets/Rain13K/train/Rain13K/target/
 ```
 
-- Crop image pairs into 512×512 patches:
-
-```bash
-python scripts/data_preparation/dpdd_crop.py
-```
-
-- You might want to change this function [create_lmdb_for_dpdd](/basicsr/utils/create_lmdb.py) so that it can handle the correct data folders. After that, convert patches into lmdb files:
+- You might want to change this function [create_lmdb_for_rain13k](/basicsr/utils/create_lmdb.py) so that it can handle the correct data folders. After that, convert patches into lmdb files:
 ```bash
 python scripts/data_preparation/dpdd_lmdb.py
 ```
 
 #### 🔹 Evaluation Data
 
-- Download the **DPDD test set** from [Restormer](https://github.com/swz30/Restormer/tree/main/Defocus_Deblurring), or follow the link in ./scripts/data_preparation/dpdd_download.py to download it manually.
-- Place the test files as follows (you can generate these lmdb files for inference following our provided codes [create_lmdb_for_dpdd](/basicsr/utils/create_lmdb.py)):
+- Download the **Rain13K test set** from [Restormer](https://github.com/swz30/Restormer/blob/main/Deraining/download_data.py).
+- Place the test files as follows (you can generate these lmdb files for inference following our provided codes [create_lmdb_for_rain13k](/basicsr/utils/create_lmdb.py)):
 
 ```
 ./datasets/DPDD/test/inputC.lmdb
