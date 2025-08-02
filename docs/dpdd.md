@@ -62,7 +62,9 @@ python -m torch.distributed.launch --nproc_per_node=8 --master_port=$((12000 + R
 #### 🔹 Pretrained Model
 
 - Download the pretrained weights from this repository:  
-  📁 `./experiments/RestoreDiNATFineTune-GoPro-width48/models/net_g_latest.pth`
+  📁 `./experiments/RestoreDiNAT-DPDD-width48/models`
+and
+  📁 `./experiments/RestoreDiNAT-SPDD-width48/models`
 
 #### 🔹 Run Evaluation (Single GPU)
 
