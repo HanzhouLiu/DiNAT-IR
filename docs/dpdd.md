@@ -24,7 +24,7 @@ We provide instructions to reproduce **DiNAT-IR** results on the GoPro motion de
 python scripts/data_preparation/dpdd_crop.py
 ```
 
-- You might want to change this function [create_lmdb_for_dpdd](utils/create_lmdb.py) so that it can handle the correct data folders. After that, convert patches into lmdb files:
+- You might want to change this function [create_lmdb_for_dpdd](/basicsr/utils/create_lmdb.py) so that it can handle the correct data folders. After that, convert patches into lmdb files:
 ```bash
 python scripts/data_preparation/dpdd_lmdb.py
 ```
@@ -32,7 +32,7 @@ python scripts/data_preparation/dpdd_lmdb.py
 #### 🔹 Evaluation Data
 
 - Download the **DPDD test set** (already in LMDB format) from [Restormer](https://github.com/swz30/Restormer/tree/main/Defocus_Deblurring), or follow the link in ./scripts/data_preparation/dpdd_download.py to download it manually.
-- Place the test files as follows (you can generate these lmdb files for inference following our provided codes [create_lmdb_for_dpdd](utils/create_lmdb.py)):
+- Place the test files as follows (you can generate these lmdb files for inference following our provided codes [create_lmdb_for_dpdd](/basicsr/utils/create_lmdb.py)):
 
 ```
 ./datasets/DPDD/test/inputC.lmdb
