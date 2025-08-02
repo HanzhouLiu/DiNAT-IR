@@ -73,3 +73,22 @@ and pretrained models are in the /experiments/pretrained_weights folder.
 | Image Deraining             | Test2800    | PSNR       | 33.91    | 34.18      |
 | Image Deraining             | Test1200    | PSNR       | 32.31    | 33.19      |
 | Image Deraining             | Test100     | PSNR       | 31.22    | 32.00      |
+
+## 📖 Training & Inference Instructions
+
+For detailed instructions on reproducing motion deblurring results, see [GoPro Reproduction Guide](docs/gopro.md).
+For detailed instructions on reproducing defocus deblurring results, see [DPDD Reproduction Guide](docs/gopro.md).
+For detailed instructions on reproducing denoising results, see [SIDD Reproduction Guide](docs/gopro.md).
+For detailed instructions on reproducing deraining results, see [Rain13K Reproduction Guide](docs/gopro.md).
+
+## 📜 Citation
+
+If you find this work helpful, please consider citing:
+
+```bibtex
+@article{liu2025dinat,
+  title={DiNAT-IR: Exploring Dilated Neighborhood Attention for High-Quality Image Restoration},
+  author={Liu, Hanzhou and Li, Binghan and Liu, Chengkai and Lu, Mi},
+  journal={arXiv preprint arXiv:2507.17892},
+  year={2025}
+}
