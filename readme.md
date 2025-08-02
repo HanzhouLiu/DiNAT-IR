@@ -3,7 +3,7 @@
 # DiNAT-IR: Exploring Dilated Neighborhood Attention for High-Quality Image Restoration
 
 Official PyTorch implementation of the paper:  
-**[DiNAT-IR: Exploring Dilated Neighborhood Attention for High-Quality Image Restoration](https://arxiv.org/abs/xxx)**
+**[DiNAT-IR: Exploring Dilated Neighborhood Attention for High-Quality Image Restoration](https://arxiv.org/abs/2507.17892)**
 
 **Hanzhou Liu, Binghan Li, Chengkai Liu, Mi Lu**
 
