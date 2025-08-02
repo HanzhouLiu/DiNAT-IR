@@ -24,7 +24,7 @@ python scripts/data_preparation/rain13k_lmdb.py
 #### 🔹 Evaluation Data
 
 - Download the **Rain13K test set** from [Restormer](https://github.com/swz30/Restormer/blob/main/Deraining/download_data.py).
-- Place the test files as follows (you can generate these lmdb files for inference following our provided codes [create_lmdb_for_rain13k](/basicsr/utils/create_lmdb.py) and [create_lmdb_for_rain13k](/scripts/data_preparation/rain13k_lmdb.py)):
+- Place the test files as follows (you can generate these lmdb files for inference by modifying our provided codes [create_lmdb_for_rain13k](/basicsr/utils/create_lmdb.py) and [create_lmdb_for_rain13k](/scripts/data_preparation/rain13k_lmdb.py)):
 
 ```
 ./datasets/Rain13K/test/Rain100H/input.lmdb
