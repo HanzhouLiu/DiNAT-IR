@@ -77,8 +77,11 @@ and pretrained models are in the /experiments/pretrained_weights folder.
 ## 📖 Training & Inference Instructions
 
 > For detailed instructions on reproducing motion deblurring results, see [GoPro Reproduction Guide](docs/gopro.md).
+
 > For detailed instructions on reproducing defocus deblurring results, see [DPDD Reproduction Guide](docs/gopro.md).
+
 > For detailed instructions on reproducing denoising results, see [SIDD Reproduction Guide](docs/gopro.md).
+
 > For detailed instructions on reproducing deraining results, see [Rain13K Reproduction Guide](docs/gopro.md).
 
 ## 📜 Citation
