@@ -66,7 +66,7 @@ and pretrained models are in the /experiments/pretrained_weights folder.
 | Motion Deblurring           | GoPro       | PSNR       | 33.80    | 32.92      |
 | Motion Deblurring           | HIDE        | PSNR       | 31.57    | 31.22      |
 | Defocus Deblurring (DP)     | DPDD        | PSNR       | 27.05    | 26.66      |
-| Single Image Defocus        | DPDD        | PSNR       | 28.94    | 28.87      |
+| Single Image Defocus        | DPDD        | PSNR       | 26.14    | 25.98      |
 | Image Denoising             | SIDD        | PSNR       | 39.89    | 40.02      |
 | Image Deraining             | Rain100H    | PSNR       | 31.26    | 31.46      |
 | Image Deraining             | Rain100L    | PSNR       | 38.93    | 38.99      |
