@@ -12,8 +12,8 @@ Official PyTorch implementation of the paper:
 ---
 
 ## 🔥 News
-- **2025.07.xx**: Code and pretrained models are released!
-- **2025.07.xx**: Paper is available on arXiv! [📄](https://arxiv.org/abs/xxx)
+- **2025.08.02**: Code and pretrained models are released!
+- **2025.07.23**: Paper is available on arXiv! [📄](https://arxiv.org/abs/2507.17892)
 
 ---
 
