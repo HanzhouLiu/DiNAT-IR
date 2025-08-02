@@ -1,0 +1,106 @@
+# ------------------------------------------------------------------------
+# Copyright (c) 2022 megvii-model. All Rights Reserved.
+# ------------------------------------------------------------------------
+# Modified from BasicSR (https://github.com/xinntao/BasicSR)
+# Copyright 2018-2020 BasicSR Authors
+# ------------------------------------------------------------------------
+# general settings
+name: RestoreDiNAT-Rain13K-width48
+model_type: ImageRestorationModel
+scale: 1
+num_gpu: 8
+manual_seed: 42
+
+datasets:
+  train:
+    name: rain13k-train
+    type: PairedImageDataset
+    dataroot_lq: ./datasets/Rain13K/train/Rain13K/input.lmdb
+    dataroot_gt: ./datasets/Rain13K/train/Rain13K/target.lmdb
+
+    filename_tmpl: '{}'
+    io_backend:
+      type: lmdb
+
+    gt_size: 256
+    use_flip: true
+    use_rot: true
+
+    # data loader
+    use_shuffle: true
+    num_worker_per_gpu: 2
+    batch_size_per_gpu: 2
+    dataset_enlarge_ratio: 1
+    prefetch_mode: ~
+
+  val:
+    name: rain13k-val
+    type: PairedImageDataset
+    dataroot_lq: ./datasets/Rain13K/test/Rain100L/input.lmdb
+    dataroot_gt: ./datasets/Rain13K/test/Rain100L/target.lmdb
+    io_backend:
+      type: lmdb
+
+
+network_g:
+  type: RestoreDiNATLocal
+  inp_channels: 3
+  out_channels: 3
+  dim: 48
+  chan_adapt: True
+  mode: hybrid
+
+# path
+path:
+  pretrain_network_g: ~
+  strict_load_g: true
+  resume_state: ~
+
+# training settings
+train:
+  optim_g:
+    type: AdamW
+    lr: !!float 3e-4
+    weight_decay: !!float 1e-4
+    betas: [0.9, 0.999]
+
+  scheduler:
+    type: TrueCosineAnnealingLR
+    T_max: 300000
+    eta_min: !!float 1e-6
+
+  total_iter: 300000
+  warmup_iter: -1 # no warm up
+  use_grad_clip: true
+
+  # losses
+  pixel_opt:
+    type: L1Loss
+    loss_weight: 1
+    reduction: mean
+
+# validation settings
+val:
+  val_freq: !!float 1e4
+  save_img: false
+
+
+  metrics:
+    psnr: # metric name, can be arbitrary
+      type: calculate_psnr
+      crop_border: 0
+      test_y_channel: True
+
+# logging settings
+logger:
+  print_freq: 200
+  save_checkpoint_freq: !!float 5e3
+  use_tb_logger: true
+  wandb:
+    project: ~
+    resume_id: ~
+
+# dist training settings
+dist_params:
+  backend: nccl
+  port: 29500
