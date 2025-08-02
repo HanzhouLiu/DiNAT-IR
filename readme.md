@@ -56,3 +56,30 @@ pip install -r requirements.txt
 
 # Develop mode without CUDA extensions
 python setup.py develop --no_cuda_ext
+```
+---
+
+## 📊 Benchmark Results
+
+We evaluate **DiNAT-IR** across several benchmarks. Full results are available on Hugging Face:
+
+👉 **[📁 Hugging Face Repository](https://huggingface.co/datasets/HanzhouLiu/DiNAT-IR)**
+
+and pretrained models are in the /experiments/pretrained_weights folder.
+
+| Task                        | Dataset     | Metric (↑) | DiNAT-IR | Restormer |
+|-----------------------------|-------------|------------|----------|------------|
+| Motion Deblurring           | GoPro       | PSNR       | 33.80    | 32.92      |
+| Motion Deblurring           | HIDE        | PSNR       | 31.57    | 31.22      |
+| Defocus Deblurring (DP)     | DPDD        | PSNR       | 27.05    | 26.66      |
+| Single Image Defocus        | DPDD        | PSNR       | 28.94    | 28.87      |
+| Image Denoising             | SIDD        | PSNR       | 39.89    | 40.02      |
+| Image Deraining             | Rain100H    | PSNR       | 31.26    | 31.46      |
+| Image Deraining             | Rain100L    | PSNR       | 38.93    | 38.99      |
+| Image Deraining             | Test2800    | PSNR       | 33.91    | 34.18      |
+| Image Deraining             | Test1200    | PSNR       | 32.31    | 33.19      |
+| Image Deraining             | Test100     | PSNR       | 31.22    | 32.00      |
+
+
+> 📌 More detailed logs, `.pth` weights, and visualization samples are hosted at:  
+> 👉 **[https://huggingface.co/datasets/HanzhouLiu/DiNAT-IR](https://huggingface.co/datasets/HanzhouLiu/DiNAT-IR)**
