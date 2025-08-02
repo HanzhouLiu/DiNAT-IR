@@ -1,6 +1,6 @@
-## 🚀 Reproducing Results on GoPro Dataset
+## 🚀 Reproducing Results on DPDD Dataset
 
-We provide instructions to reproduce **DiNAT-IR** results on the GoPro motion deblurring dataset.
+We provide instructions to reproduce **DiNAT-IR** results on the DPDD defocus deblurring dataset.
 
 ---
 
