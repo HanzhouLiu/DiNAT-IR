@@ -33,7 +33,11 @@ We evaluate DiNAT-IR on multiple image restoration tasks:
 This implementation is based on [BasicSR](https://github.com/xinntao/BasicSR).
 
 ```bash
-git clone https://github.com/xxx/DiNAT-IR.git
+git clone https://github.com/HanzhouLiu/DiNAT-IR.git
 cd DiNAT-IR
+conda create -n DiNAT-IR python=3.8
+conda activate DiNAT-IR
+conda install pytorch==2.0.0 torchvision==0.15.0 pytorch-cuda=11.8 -c pytorch -c nvidia
+pip3 install natten==0.14.6+torch200cu118 -f https://shi-labs.com/natten/wheels
 pip install -r requirements.txt
 python setup.py develop --no_cuda_ext
