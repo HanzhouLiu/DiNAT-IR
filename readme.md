@@ -10,6 +10,8 @@ Official PyTorch implementation of the paper:
 
 ## 🔥 News
 
+- **2025.08.02**: ✅ Visual results released!
+- **2025.08.02**: ✅ Training and inference instructions updated!
 - **2025.08.02**: ✅ Code and pretrained models released!
 - **2025.07.23**: 📄 Paper available on [arXiv](https://arxiv.org/abs/2507.17892)
 
