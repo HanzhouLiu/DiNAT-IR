@@ -79,7 +79,3 @@ and pretrained models are in the /experiments/pretrained_weights folder.
 | Image Deraining             | Test2800    | PSNR       | 33.91    | 34.18      |
 | Image Deraining             | Test1200    | PSNR       | 32.31    | 33.19      |
 | Image Deraining             | Test100     | PSNR       | 31.22    | 32.00      |
-
-
-> 📌 More detailed logs, `.pth` weights, and visualization samples are hosted at:  
-> 👉 **[https://huggingface.co/datasets/HanzhouLiu/DiNAT-IR](https://huggingface.co/datasets/HanzhouLiu/DiNAT-IR)**
