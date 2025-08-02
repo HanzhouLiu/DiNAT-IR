@@ -8,7 +8,7 @@ We provide instructions to reproduce **DiNAT-IR** results on the GoPro motion de
 
 #### 🔹 Training Data
 
-- Download the **DPDD training set** from [Restormer](https://github.com/swz30/Restormer/tree/main/Defocus_Deblurring), or follow the link in ./scripts/data_preparation/dpdd_download.py to download it manually.
+- Download the **DPDD training set** from [Restormer](https://github.com/swz30/Restormer/tree/main/Defocus_Deblurring), or follow the link in [dpdd_download](/scripts/data_preparation/dpdd_download.py) to download it manually.
 - Organize the data into the following directory structure  (or, you can use soft link):
 
 ```
